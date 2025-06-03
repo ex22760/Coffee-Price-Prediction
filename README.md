@@ -14,7 +14,7 @@ In this notebook, I aim to forecast a time series target variable (e.g. a climat
 
 - Interpretability via SHAP analysis
 
-We also introduce ENSO-aware feature engineering and rolling forecasts to simulate real-world deployment. Models are compared using standard regression metrics: Mean Absolute Error (MAE), Mean Squared Error (MSE), and Mean Absolute Percentage Error (MAPE).
+I also introduce ENSO-aware feature engineering and rolling forecasts to simulate real-world deployment. Models are compared using standard regression metrics: Mean Absolute Error (MAE), Mean Squared Error (MSE), and Mean Absolute Percentage Error (MAPE).
 
 This project demonstrates how ENSO signals can be leveraged for high-accuracy forecasting using modern data science techniques.
 
