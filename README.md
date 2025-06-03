@@ -1,6 +1,6 @@
 # Real World Arabica Coffee Price Prediction
 
-Forecasting climate-sensitive variables is a critical task across domains like agriculture, finance, energy, and disaster planning. One of the most influential climate patterns is the El Niño–Southern Oscillation (ENSO), which affects global weather and economic outcomes. ENSO phases — El Niño, La Niña, and Neutral — are commonly captured through indices such as the Oceanic Niño Index (ONI).
+Forecasting climate-sensitive variables is a critical task across domains like agriculture, finance, energy, and disaster planning. One of the most influential climate patterns is the El Niño–Southern Oscillation (ENSO), which affects global weather and economic outcomes. ENSO phases - El Niño, La Niña, and Neutral - are commonly captured through indices such as the Oceanic Niño Index (ONI).
 
 In this notebook, I aim to forecast a time series target variable (e.g. a climate, environmental, or economic indicator) using ENSO-related features. I explore multiple modelling approaches to understand the impact of ENSO signals and optimise predictive performance:
 
@@ -8,9 +8,9 @@ In this notebook, I aim to forecast a time series target variable (e.g. a climat
 
 - Supervised machine learning models (XGBoost, Random Forest, Gradient Boosting)
 
-- Deep learning models (LSTM, Transformer-based)
+- Deep learning models (LSTM)
 
-- Model ensembling (e.g. Stacked Regressors)
+- Model ensembling (e.g. Stacked Ensemble)
 
 - Interpretability via SHAP analysis
 
@@ -26,7 +26,7 @@ This project demonstrates how ENSO signals can be leveraged for high-accuracy fo
 
 - **Libraries:**
   - **Data Manipulation & Analysis:** `pandas`, `numpy`
-  - **Visualization:** `matplotlib`, `seaborn`
+  - **Visualisation:** `matplotlib`, `seaborn`
   - **Time Series Modeling:** `statsmodels` (SARIMAX, VAR, decomposition, stationarity tests)
   - **Machine Learning:** `scikit-learn` (Random Forest, Gradient Boosting, RFE, RFECV, Stacking), `xgboost`
   - **Deep Learning:** `tensorflow`, `keras` (LSTM)
@@ -74,71 +74,58 @@ This project demonstrates how ENSO signals can be leveraged for high-accuracy fo
 
 This notebook walks through the following key steps:
 
-### 1. Exploratory Data Analysis (EDA)
-- Survival rate by gender and age
-- Distribution analysis of age and fares
+### 1. Data Overview + Exploratory Data Analysis (EDA) 
+- Dataset Merging and Structure
+- Summary Stats and Missing Data
+- Time Series Plots and Visual Comparisons
+- Stationarity and Decomposition insights
+- Volatility (Rolling STD) analysis
 
 ### 2. Feature Engineering
-- Extracted **honorifics** from passenger names
-- Grouped **cabins** by deck
-- Calculated **family size** and identified **single mothers**
-- Removed redundant/collinear features (e.g. high correlation between `SibSp` and `FamilySize`)
+- Correlation Analysis with Lag Features
+- Seasonal and Rolling Average Features
+- Categorical ENSO Phases
+- Interaction Features
+- ENSO Timing Feature over Time
+- Correlation of Engineered Features to Price
 
-### 3. Imputation Techniques Explored
-- Mean/Median/Mode imputation (with group-based logic)
-- Random imputation (performed best)
-  
-  ![image](https://github.com/user-attachments/assets/11f1ea5d-2d57-4a9a-a288-183a49678dbf)
+### Modelling 
 
-  
-  ![image](https://github.com/user-attachments/assets/660a508b-0502-4d61-9a5f-6e6981d346a9)
-
-
-- Stratified random sampling
-- Advanced methods: **MICE**, **MissForest**, **KNN**
-
-### 4. Feature Engineering & Preprocessing
-- Capped outliers
-- Log, Box-Cox, and Yeo-Johnson transformations
-
-  
-  ![image](https://github.com/user-attachments/assets/1137d0a4-28b9-47ad-97e9-282f57584fe5)
-
-- Encoded rare labels in categorical columns
-- Calculated permutation-based feature importances:
-
-  
-![image](https://github.com/user-attachments/assets/a30ccf30-86cf-476d-955b-74f5e1c56279)
-
-
-
-### 5. Modelling and Grid Search
-
-
-| Pipeline                         | Train Accuracy | Test Accuracy |
-|---------------------------------|----------------|---------------|
-| Random Forest Classification     | 0.995          | 0.802         |
-| Gradient Boosting Classification | 0.915          | 0.802         |
-| Logistic Regression              | 0.839          | 0.821         |
-| **Random Forest with Grid Search** | **0.851**    | **0.825**     |
-| Gradient Boosting with Grid Search | 0.909        | 0.795         |
-| Logistic Regression with Grid Search | 0.833       | 0.810         |
-
-
-  - Random Forest with Grid search performed best with best parameters: `max_depth=5`, `min_samples_split=10`, `n_estimators=30`
-
+- Traditional Models
+  - SARIMA (seasonality only)
+  - Seasonal SARIMAX (log-diff + exog + seasonality)
+  - VAR with Differencing
+    
+- Machine Learning Models
+  - Gradient Boosting
+    - Engineered features only (correlation-based)
+    - Simple model (no engineered features)
+    - Simple + RFE selected engineered features
+    - Simple + RFECV selected features
+  - XGBoost
+    - Standard with GridSearch
+    - With Rolling Forecast
+  -RandomFOrest
+    - Standard with GridSearch
+    - With Regularisation
+  - LSTM
+    - Standard
+    - With 'is_stable_month' flag
+      
+- Stacked Ensemble Model (LSTM + XGBoost)
 
 ---
 
-## Final Classification Report
+## Results
 
-| Class   | Precision | Recall | F1-Score | Support |
-|---------|-----------|--------|----------|---------|
-| 0       | 0.81      | 0.91   | 0.86     | 157     |
-| 1       | 0.85      | 0.70   | 0.77     | 111     |
-| **Accuracy** |           |        | **0.82**   | 268     |
-| **Macro Avg** | 0.83      | 0.81   | 0.81     | 268     |
-| **Weighted Avg** | 0.83  | 0.82   | 0.82     | 268     |
+
+| Model                                         | MAE    | MAPE    | MSE     |
+|----------------------------------------------|--------|---------|---------|
+| Updated LSTM (is_stable_month)               | 0.3895 | 28.05%  | 0.1972  |
+| Random Forest (Regularised)                   | 0.0986 | 6.45%   | 0.0197  |
+| XGBoost with Rolling Forecast                 | 0.1012 | 6.24%   | 0.0211  |
+| Simple + RFE selected engineered features     | 0.0978 | 6.04%   | 0.0208  |
+| **LSTM + XGBoost Ensemble**                    | 0.1119 | 6.83%   | 0.0224  |
 
 
 ---
@@ -148,8 +135,8 @@ This notebook walks through the following key steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/ex22760/titanic-survival-prediction.git
-cd titanic-survival-prediction
+git clone https://github.com/ex22760/Coffee-Price-Prediction.git
+cd Coffee-Price-Prediction
 ```
 
 2. Install dependencies:
@@ -161,7 +148,7 @@ pip install -r requirements.txt
 3. Launch the notebook:
 
 ```bash
-jupyter notebook titanic_survival_analysis.ipynb
+jupyter notebook arabica-coffee-price-prediction.ipynb
 ```
 
 ---
@@ -170,22 +157,19 @@ jupyter notebook titanic_survival_analysis.ipynb
 
 ```bash
 
-├── data/                   # Raw datasets used for the competition
-├── titanic_notebook.ipynb  # Main notebook with code and analysis
-├── submission_titanic.csv  # Final prediction file submitted to Kaggle
+├── data/                                  # Raw datasets extracted from online
+├── arabica-coffee-price-prediction.ipynb  # Main notebook with code and analysis
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
-├── .gitignore
 ```
 
 ---
 
 ## Acknowledgements
 
-Developed as part of the Titanic: Machine Learning from Disaster competition.
-
-![image](https://github.com/user-attachments/assets/609478e2-b15a-4588-8f61-cdd6716bdf9e)
+Developed initially as part of the module 'Mathematical Data Modelling 3' at the University Of Bristol: Engineering Mathemeatics course. 
+Expanded from a single XGBoost model I created to a complete end to end pipeline repository including another personally researched dataset to improve model accuracy. 
 
 ---
 
