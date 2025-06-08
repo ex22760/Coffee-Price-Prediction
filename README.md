@@ -74,7 +74,7 @@ To make the ensemble model results easily interpretable and accessible, I develo
 
 ## Workflow 
 
-This notebook walks through the following key steps:
+The notebook walks through the following key steps:
 
 ### 1. Data Overview + Exploratory Data Analysis (EDA) 
 - Dataset Merging and Structure
@@ -88,7 +88,6 @@ This notebook walks through the following key steps:
 ### 2. Feature Engineering
 - Correlation Analysis with Lag Features
 - Seasonal and Rolling Average Features
-    ![image](https://github.com/user-attachments/assets/1746c2fa-33f9-4081-9fda-5078ce78ef73)
 - Categorical ENSO Phases
 - Interaction Features
 - ENSO Timing Feature over Time
@@ -102,13 +101,16 @@ This notebook walks through the following key steps:
   - SARIMA (seasonality only)
   - Seasonal SARIMAX (log-diff + exog + seasonality)
   - VAR with Differencing
-    
+    ![image](https://github.com/user-attachments/assets/6f9f541e-caa2-4de6-9c0a-75dc792d7872)
+
 - Machine Learning Models
   - Gradient Boosting
     - Engineered features only (correlation-based)
     - Simple model (no engineered features)
     - Simple + RFE selected engineered features
     - Simple + RFECV selected features
+    - ![image](https://github.com/user-attachments/assets/8896c2a5-53f1-4ccd-822e-8a1345fa37da)
+
   - XGBoost
     - Standard with GridSearch
     - With Rolling Forecast
@@ -126,6 +128,8 @@ This notebook walks through the following key steps:
 
       
 - Stacked Ensemble Model (LSTM + XGBoost)
+  ![image](https://github.com/user-attachments/assets/01223920-0721-473a-9fdc-0d70ace83f08)
+
 
 ---
 
