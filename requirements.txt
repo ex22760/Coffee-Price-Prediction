@@ -1,22 +1,12 @@
-# Core libraries
 pandas>=1.3
 numpy>=1.21
 matplotlib>=3.4
 seaborn>=0.11
-datetime
-
-# Machine Learning
 scikit-learn>=1.0
 xgboost>=1.4
-
-# Deep Learning
 tensorflow>=2.8
-
-# Statsmodels for classical time series models
 statsmodels>=0.13
-
-# SHAP for interpretability
 shap>=0.41
-
-# Optional but helpful for Jupyter/Notebook environments
 jupyter
+streamlit>=1.0
+
