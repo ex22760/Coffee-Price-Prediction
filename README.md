@@ -133,7 +133,7 @@ This notebook walks through the following key steps:
 | XGBoost with Rolling Forecast       | 0.1022 | 6.24%  | 0.0216 |
 | VAR (with differencing)             | 0.6978 | 0.5156 | 28.11% |
 | Simple + RFECV selected features    | 0.0937 | 5.90%  | 0.0188 |
-| **LSTM + XGBoost Ensemble**             | 0.1050 | 6.46%  | 0.0201 |
+| **LSTM + XGBoost Ensemble**         | 0.1097 | 6.70%  | 0.0218 |
 
 
 ---
