@@ -101,7 +101,6 @@ The notebook walks through the following key steps:
   - SARIMA (seasonality only)
   - Seasonal SARIMAX (log-diff + exog + seasonality)
   - VAR with Differencing
-    ![image](https://github.com/user-attachments/assets/6f9f541e-caa2-4de6-9c0a-75dc792d7872)
 
 - Machine Learning Models
   - Gradient Boosting
@@ -109,26 +108,21 @@ The notebook walks through the following key steps:
     - Simple model (no engineered features)
     - Simple + RFE selected engineered features
     - Simple + RFECV selected features
-    - ![image](https://github.com/user-attachments/assets/8896c2a5-53f1-4ccd-822e-8a1345fa37da)
 
   - XGBoost
     - Standard with GridSearch
     - With Rolling Forecast
-      ![image](https://github.com/user-attachments/assets/e4e9f43a-59b6-448b-8379-3fb97745e216)
 
   -RandomForest
     - Standard with GridSearch
     - With Regularisation
-      ![image](https://github.com/user-attachments/assets/0e079d69-2a5d-42e9-ae76-7d2624288107)
 
   - LSTM
     - Standard
     - With 'is_stable_month' flag
-      ![image](https://github.com/user-attachments/assets/e7f40530-56ef-4de6-a026-d71cdfcd192a)
 
       
 - Stacked Ensemble Model (LSTM + XGBoost)
-  ![image](https://github.com/user-attachments/assets/01223920-0721-473a-9fdc-0d70ace83f08)
 
 
 ---
