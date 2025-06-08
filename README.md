@@ -164,7 +164,7 @@ jupyter notebook arabica-coffee-price-prediction.ipynb
 ```bash
 
 ├── data/                                  # Raw datasets extracted from online
-├── arabica-coffee-price-prediction.ipynb  # Main notebook with code and analysis
+├── coffee-price-prediction.ipynb  # Main notebook with code and analysis
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
@@ -174,7 +174,7 @@ jupyter notebook arabica-coffee-price-prediction.ipynb
 
 ## Acknowledgements
 
-Developed initially as part of the module 'Mathematical Data Modelling 3' at the University Of Bristol: Engineering Mathemeatics course. 
+Developed initially as part of the module 'Mathematical Data Modelling 3' at the University Of Bristol: Engineering Mathematics course. 
 Expanded from a single XGBoost model I created to a complete end to end pipeline repository including another personally researched dataset to improve model accuracy. 
 
 ---
