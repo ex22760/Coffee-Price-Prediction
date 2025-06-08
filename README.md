@@ -80,16 +80,25 @@ This notebook walks through the following key steps:
 - Dataset Merging and Structure
 - Summary Stats and Missing Data
 - Time Series Plots and Visual Comparisons
+  ![image](https://github.com/user-attachments/assets/e12d3784-4c3b-490d-b9cc-7d399a4740cf)
 - Stationarity and Decomposition insights
 - Volatility (Rolling STD) analysis
+  ![image](https://github.com/user-attachments/assets/64f8ea5f-bdd5-4f14-ae42-0a5130c6ac35)
 
 ### 2. Feature Engineering
 - Correlation Analysis with Lag Features
+  ![image](https://github.com/user-attachments/assets/34f67350-42fe-4282-8ebd-c86d2af3f658)
+
 - Seasonal and Rolling Average Features
+    ![image](https://github.com/user-attachments/assets/1746c2fa-33f9-4081-9fda-5078ce78ef73)
 - Categorical ENSO Phases
 - Interaction Features
+  ![image](https://github.com/user-attachments/assets/25a0c403-7481-4707-b688-9e4ec74ce3dc)
+
 - ENSO Timing Feature over Time
 - Correlation of Engineered Features to Price
+![image](https://github.com/user-attachments/assets/badec2bb-0979-4286-9368-a6a35d6f286a)
+
 
 ### Modelling 
 
@@ -107,12 +116,18 @@ This notebook walks through the following key steps:
   - XGBoost
     - Standard with GridSearch
     - With Rolling Forecast
-  -RandomFOrest
+      ![image](https://github.com/user-attachments/assets/e4e9f43a-59b6-448b-8379-3fb97745e216)
+
+  -RandomForest
     - Standard with GridSearch
     - With Regularisation
+      ![image](https://github.com/user-attachments/assets/0e079d69-2a5d-42e9-ae76-7d2624288107)
+
   - LSTM
     - Standard
     - With 'is_stable_month' flag
+      ![image](https://github.com/user-attachments/assets/e7f40530-56ef-4de6-a026-d71cdfcd192a)
+
       
 - Stacked Ensemble Model (LSTM + XGBoost)
 
