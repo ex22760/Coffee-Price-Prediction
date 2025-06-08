@@ -103,6 +103,7 @@ The notebook walks through the following key steps:
 ### 2. Feature Engineering
 - Correlation Analysis with Lag Features
 - Seasonal and Rolling Average Features
+- 
  ![image](https://github.com/user-attachments/assets/d2a6d041-ab36-4935-9504-4c3e15bd37fa)
 
 - Categorical ENSO Phases
