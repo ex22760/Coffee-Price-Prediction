@@ -1,18 +1,20 @@
 # Real World Arabica Coffee Price Prediction
 
-Forecasting climate-sensitive variables is a critical task across domains like agriculture, finance, energy, and disaster planning. One of the most influential climate patterns is the El Niño–Southern Oscillation (ENSO), which affects global weather and economic outcomes. ENSO phases - El Niño, La Niña, and Neutral - are commonly captured through indices such as the Oceanic Niño Index (ONI).
+Forecasting climate-sensitive variables is critical across sectors like agriculture, finance, energy, and disaster risk management. The El Niño–Southern Oscillation (ENSO) — comprising El Niño, La Niña, and Neutral phases — is a key climate pattern influencing global weather and economic dynamics. These phases are commonly tracked via indices such as the Oceanic Niño Index (ONI).
 
-In this project, I develop a time series forecasting pipeline using macroeconomic indicators and ENSO-related features to predict the price of Arabica Coffee in USD/kg. I apply and compare multiple modelling techniques—including LSTM, XGBoost, and statistical models—and integrate them into an ensemble to enhance forecast accuracy. Multiple modelling approaches explored include: 
+In this project, I develop a robust time series forecasting pipeline leveraging macroeconomic indicators and ENSO-related features to predict Arabica coffee prices (USD/kg). I implement and benchmark multiple modelling approaches, including:
 
-- Classical time series models (e.g. SARIMAX, VAR)
+Classical time series models (SARIMAX, VAR)
 
-- Supervised machine learning models (XGBoost, Random Forest, Gradient Boosting)
+Supervised machine learning models (XGBoost, Random Forest, Gradient Boosting)
 
-- Deep learning models (LSTM)
+Deep learning models (LSTM)
 
-- Model ensembling (e.g. Stacked Ensemble)
+Ensemble techniques (stacked models) to improve forecast accuracy
 
-I also introduce ENSO-aware feature engineering and rolling forecasts to simulate real-world deployment. To support analysis and interpretation, I developed an interactive Streamlit dashboard that visualises model predictions against actuals, providing key performance metrics (MAE, MAPE, MSE) and enabling efficient exploration of forecast behavior across time.
+Additionally, I incorporate ENSO-aware feature engineering and rolling forecast validation to better simulate deployment scenarios. To facilitate analysis and communication of results, I built an interactive Streamlit dashboard showcasing model predictions versus actuals, alongside key metrics (MAE, MAPE, MSE), enabling efficient exploration of forecast performance over time.
+
+
 
 ---
 
