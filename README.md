@@ -1,5 +1,11 @@
 # Real World Arabica Coffee Price Prediction
 
+This project delivers a robust time series forecasting pipeline combining macroeconomic indicators and ENSO climate signals to predict Arabica coffee prices. Leveraging classical, machine learning, and deep learning models, I build an ensemble to enhance accuracy and deploy an interactive Streamlit dashboard for real-time forecast visualisation and performance monitoring.
+
+---
+
+## Background / Motivation
+
 Forecasting climate-sensitive variables is critical across sectors like agriculture, finance, energy, and disaster risk management. The El Niño–Southern Oscillation (ENSO) — comprising El Niño, La Niña, and Neutral phases — is a key climate pattern influencing global weather and economic dynamics. These phases are commonly tracked via indices such as the Oceanic Niño Index (ONI).
 
 In this project, I develop a robust time series forecasting pipeline leveraging macroeconomic indicators and ENSO-related features to predict Arabica coffee prices (USD/kg). I implement and benchmark multiple modelling approaches, including:
@@ -13,8 +19,6 @@ In this project, I develop a robust time series forecasting pipeline leveraging 
 - Ensemble techniques (stacked models) to improve forecast accuracy
 
 Additionally, I incorporate ENSO-aware feature engineering and rolling forecast validation to better simulate deployment scenarios. To facilitate analysis and communication of results, I built an interactive Streamlit dashboard showcasing model predictions versus actuals, alongside key metrics (MAE, MAPE, MSE), enabling efficient exploration of forecast performance over time.
-
-
 
 ---
 
