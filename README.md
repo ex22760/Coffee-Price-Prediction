@@ -22,11 +22,12 @@ Additionally, I incorporate ENSO-aware feature engineering and rolling forecast 
 
 **Datasets sourced from:**
 
-DXY - https://www.wsj.com/market-data/quotes/index/DXY/historical-prices?gaa_at=eafs&gaa_n=ASWzDAhMCbT1tZcvpuwiNreAYkMkKN1bTZ8t4s4_SLVn1QsNKnte1YCMiftI&gaa_sig=_hIGuePF5awrqgS-ySZhmUAY9cf5gJOLUtSU2UhmwjAY7pDjH62cs4R0sV8JG83tZD-MVQvEOXj26W_YZ8N9_A%3D%3D&gaa_ts=683b250c
+- **DXY** - [Historical Prices on WSJ](https://www.wsj.com/market-data/quotes/index/DXY/historical-prices?gaa_at=eafs&gaa_n=ASWzDAhMCbT1tZcvpuwiNreAYkMkKN1bTZ8t4s4_SLVn1QsNKnte1YCMiftI&gaa_sig=_hIGuePF5awrqgS-ySZhmUAY9cf5gJOLUtSU2UhmwjAY7pDjH62cs4R0sV8JG83tZD-MVQvEOXj26W_YZ8N9_A%3D%3D&gaa_ts=683b250c)
 
-ONI - https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php
+- **ONI** - [Oceanic Niño Index (ONI) on NOAA](https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php)
 
-Arabica - https://tradingeconomics.com/commodity/coffee
+- **Arabica Coffee Prices** - [Trading Economics - Coffee](https://tradingeconomics.com/commodity/coffee)
+
 
 ---
 
