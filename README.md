@@ -130,6 +130,12 @@ This notebook walks through the following key steps:
 
 ---
 
+## Dashboard
+
+![image](https://github.com/user-attachments/assets/17423af5-07b8-4be2-928f-2fe7163337a0)
+
+---
+
 ## How to Run 
 
 1. Clone the repository:
