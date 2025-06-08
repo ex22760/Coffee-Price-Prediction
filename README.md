@@ -68,6 +68,13 @@ This project demonstrates how ENSO signals can be leveraged for high-accuracy fo
 
 - **Best Option:** Use the *Simple + RFE selected engineered features* model for its top accuracy and simplicity.
 - **Alternative (Hybrid):** Consider deploying the *LSTM + XGBoost Ensemble* for situations requiring robustness across temporal patterns and feature-based variance.
+  
+---
+
+## Dashboard
+
+![image](https://github.com/user-attachments/assets/17423af5-07b8-4be2-928f-2fe7163337a0)
+
 ---
 
 ## Workflow 
@@ -119,20 +126,15 @@ This notebook walks through the following key steps:
 ## Results
 
 
-| Model                                         | MAE    | MAPE    | MSE     |
-|----------------------------------------------|--------|---------|---------|
-| Updated LSTM (is_stable_month)               | 0.3895 | 28.05%  | 0.1972  |
-| Random Forest (Regularised)                   | 0.0986 | 6.45%   | 0.0197  |
-| XGBoost with Rolling Forecast                 | 0.1012 | 6.24%   | 0.0211  |
-| Simple + RFE selected engineered features     | 0.0978 | 6.04%   | 0.0208  |
-| **LSTM + XGBoost Ensemble**                    | 0.1119 | 6.83%   | 0.0224  |
+| Model                               | MAE    | MAPE   | MSE    |
+|-------------------------------------|--------|--------|--------|
+| Updated LSTM (is_stable_month)      | 0.1245 | 7.65%  | 0.0337 |
+| Random Forest (Regularised)         | 0.1028 | 6.64%  | 0.0218 |
+| XGBoost with Rolling Forecast       | 0.1022 | 6.24%  | 0.0216 |
+| VAR (with differencing)             | 0.6978 | 0.5156 | 28.11% |
+| Simple + RFECV selected features    | 0.0937 | 5.90%  | 0.0188 |
+| **LSTM + XGBoost Ensemble**             | 0.1050 | 6.46%  | 0.0201 |
 
-
----
-
-## Dashboard
-
-![image](https://github.com/user-attachments/assets/17423af5-07b8-4be2-928f-2fe7163337a0)
 
 ---
 
