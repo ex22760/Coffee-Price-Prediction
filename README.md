@@ -20,6 +20,14 @@ In this project, I develop a robust time series forecasting pipeline leveraging 
 
 Additionally, I incorporate ENSO-aware feature engineering and rolling forecast validation to better simulate deployment scenarios. To facilitate analysis and communication of results, I built an interactive Streamlit dashboard showcasing model predictions versus actuals, alongside key metrics (MAE, MAPE, MSE), enabling efficient exploration of forecast performance over time.
 
+**Datasets sourced from:**
+
+DXY - https://www.wsj.com/market-data/quotes/index/DXY/historical-prices?gaa_at=eafs&gaa_n=ASWzDAhMCbT1tZcvpuwiNreAYkMkKN1bTZ8t4s4_SLVn1QsNKnte1YCMiftI&gaa_sig=_hIGuePF5awrqgS-ySZhmUAY9cf5gJOLUtSU2UhmwjAY7pDjH62cs4R0sV8JG83tZD-MVQvEOXj26W_YZ8N9_A%3D%3D&gaa_ts=683b250c
+
+ONI - https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php
+
+Arabica - https://tradingeconomics.com/commodity/coffee
+
 ---
 
 ## Tech Stack
