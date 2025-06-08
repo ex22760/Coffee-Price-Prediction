@@ -2,7 +2,7 @@
 
 Forecasting climate-sensitive variables is a critical task across domains like agriculture, finance, energy, and disaster planning. One of the most influential climate patterns is the El Niño–Southern Oscillation (ENSO), which affects global weather and economic outcomes. ENSO phases - El Niño, La Niña, and Neutral - are commonly captured through indices such as the Oceanic Niño Index (ONI).
 
-In this notebook, I aim to forecast a time series target variable (e.g. a climate, environmental, or economic indicator) using ENSO-related features. I explore multiple modelling approaches to understand the impact of ENSO signals and optimise predictive performance:
+In this project, I develop a time series forecasting pipeline using macroeconomic indicators and ENSO-related features to predict the price of Arabica Coffee in USD/kg. I apply and compare multiple modelling techniques—including LSTM, XGBoost, and statistical models—and integrate them into an ensemble to enhance forecast accuracy. Multiple modelling approaches explored include: 
 
 - Classical time series models (e.g. SARIMAX, VAR)
 
@@ -12,11 +12,7 @@ In this notebook, I aim to forecast a time series target variable (e.g. a climat
 
 - Model ensembling (e.g. Stacked Ensemble)
 
-- Interpretability via SHAP analysis
-
-I also introduce ENSO-aware feature engineering and rolling forecasts to simulate real-world deployment. Models are compared using standard regression metrics: Mean Absolute Error (MAE), Mean Squared Error (MSE), and Mean Absolute Percentage Error (MAPE).
-
-This project demonstrates how ENSO signals can be leveraged for high-accuracy forecasting using modern data science techniques.
+I also introduce ENSO-aware feature engineering and rolling forecasts to simulate real-world deployment. To support analysis and interpretation, I developed an interactive Streamlit dashboard that visualises model predictions against actuals, providing key performance metrics (MAE, MAPE, MSE) and enabling efficient exploration of forecast behavior across time.
 
 ---
 
@@ -30,16 +26,13 @@ This project demonstrates how ENSO signals can be leveraged for high-accuracy fo
   - **Time Series Modeling:** `statsmodels` (SARIMAX, VAR, decomposition, stationarity tests)
   - **Machine Learning:** `scikit-learn` (Random Forest, Gradient Boosting, RFE, RFECV, Stacking), `xgboost`
   - **Deep Learning:** `tensorflow`, `keras` (LSTM)
-  - **Model Explainability:** `shap`
   - **Utilities:** `datetime`, `random`, `os`, `re`, `warnings`
 
 - **Tools:**
   - **Development Environment:** Jupyter Notebook / JupyterLab
   - **Version Control:** Git & GitHub
   - **Model Optimisation:** `GridSearchCV`, `TimeSeriesSplit`, `Pipeline`
-  - **Visualisation & Debugging:** SHAP plots
-
-
+  - **Interactive Dashboarding** - `Streamlit` (for building a web app to visualise and compare model forecasts)
 
 ---
 
@@ -159,6 +152,12 @@ pip install -r requirements.txt
 
 ```bash
 jupyter notebook arabica-coffee-price-prediction.ipynb
+```
+
+4: Run the Streamlit Dashboard:
+
+```bash
+streamlit run ensemble_dashboard.py
 ```
 
 ---
