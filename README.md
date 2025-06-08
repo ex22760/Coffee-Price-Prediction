@@ -87,14 +87,10 @@ This notebook walks through the following key steps:
 
 ### 2. Feature Engineering
 - Correlation Analysis with Lag Features
-  ![image](https://github.com/user-attachments/assets/34f67350-42fe-4282-8ebd-c86d2af3f658)
-
 - Seasonal and Rolling Average Features
     ![image](https://github.com/user-attachments/assets/1746c2fa-33f9-4081-9fda-5078ce78ef73)
 - Categorical ENSO Phases
 - Interaction Features
-  ![image](https://github.com/user-attachments/assets/25a0c403-7481-4707-b688-9e4ec74ce3dc)
-
 - ENSO Timing Feature over Time
 - Correlation of Engineered Features to Price
 ![image](https://github.com/user-attachments/assets/badec2bb-0979-4286-9368-a6a35d6f286a)
