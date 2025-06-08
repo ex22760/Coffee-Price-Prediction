@@ -73,6 +73,8 @@ This project demonstrates how ENSO signals can be leveraged for high-accuracy fo
 
 ## Dashboard
 
+To make the ensemble model results easily interpretable and accessible, I developed a responsive Streamlit dashboard. It allows users to upload predictions, view model performance metrics (MAE, MSE, MAPE), and interactively compare actual vs. forecasted values in an intuitive plot.
+
 ![image](https://github.com/user-attachments/assets/17423af5-07b8-4be2-928f-2fe7163337a0)
 
 ---
