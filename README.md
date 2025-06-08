@@ -166,8 +166,9 @@ jupyter notebook arabica-coffee-price-prediction.ipynb
 ```bash
 
 ├── data/                                  # Raw datasets extracted from online
-├── coffee-price-prediction.ipynb  # Main notebook with code and analysis
+├── coffee-price-prediction.ipynb          # Main notebook with code and analysis
 ├── requirements.txt
+├── ensemble_dashboard.py                  # Code for streamlit dashboard (input data for dashboard in data/streamlit_input.csv)
 ├── README.md
 ├── LICENSE
 ```
