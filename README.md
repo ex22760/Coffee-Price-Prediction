@@ -148,6 +148,26 @@ The notebook walks through the following key steps:
 
 ---
 
+## Future Work
+
+While this project demonstrates a robust forecasting pipeline integrating macroeconomic and ENSO-related features with advanced modeling techniques, several avenues remain to further improve and expand the work:
+
+- **Incorporating Additional Climate Variables:** Exploring other climate indices (e.g. Pacific Decadal Oscillation, Indian Ocean Dipole) or high-resolution weather data could capture more nuanced environmental impacts on coffee prices.
+
+- **Feature Selection & Dimensionality Reduction:** Applying advanced techniques like autoencoders or causal inference methods may help isolate the most predictive features, improving model interpretability and reducing overfitting.
+
+- **Model Interpretability & Explainability:** Extending the use of SHAP and integrating other explainability frameworks can provide deeper insights into model decisions, crucial for stakeholder trust in financial or commodity forecasting.
+
+- **Deployment & Real-Time Monitoring:** Developing a fully automated pipeline with continuous data ingestion, model retraining, and dashboard updates would simulate a production environment for live forecasting.
+
+- **Broader Economic Context:** Including geopolitical risk factors, trade policies, or global demand-supply dynamics could enhance forecasting accuracy by capturing market sensitivities beyond macroeconomic indicators.
+
+- **Alternative Ensemble Strategies:** Experimenting with different stacking or blending approaches, or integrating probabilistic forecasting models, might improve uncertainty quantification and robustness.
+
+These future directions underscore the complexity of commodity price forecasting and the ongoing need for multidisciplinary approaches combining domain knowledge, data science, and real-world considerations.
+
+---
+
 ## How to Run 
 
 1. Clone the repository:
