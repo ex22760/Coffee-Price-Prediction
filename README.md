@@ -4,13 +4,13 @@ Forecasting climate-sensitive variables is critical across sectors like agricult
 
 In this project, I develop a robust time series forecasting pipeline leveraging macroeconomic indicators and ENSO-related features to predict Arabica coffee prices (USD/kg). I implement and benchmark multiple modelling approaches, including:
 
-Classical time series models (SARIMAX, VAR)
+- Classical time series models (SARIMAX, VAR)
 
-Supervised machine learning models (XGBoost, Random Forest, Gradient Boosting)
+- Supervised machine learning models (XGBoost, Random Forest, Gradient Boosting)
 
-Deep learning models (LSTM)
+- Deep learning models (LSTM)
 
-Ensemble techniques (stacked models) to improve forecast accuracy
+- Ensemble techniques (stacked models) to improve forecast accuracy
 
 Additionally, I incorporate ENSO-aware feature engineering and rolling forecast validation to better simulate deployment scenarios. To facilitate analysis and communication of results, I built an interactive Streamlit dashboard showcasing model predictions versus actuals, alongside key metrics (MAE, MAPE, MSE), enabling efficient exploration of forecast performance over time.
 
