@@ -221,6 +221,7 @@ streamlit run ensemble_dashboard.py
 ├── ensemble_dashboard.py                  # Code for streamlit dashboard (input data for dashboard in data/streamlit_input.csv)
 ├── README.md
 ├── LICENSE
+├── Student Simulated Commodity Strategy Business Plan
 ```
 
 ---
