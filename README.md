@@ -1,6 +1,6 @@
 # Real World Arabica Coffee Price Prediction
 
-This project delivers a robust time series forecasting pipeline combining macroeconomic indicators and ENSO climate signals to predict Arabica coffee prices. Leveraging classical, machine learning, and deep learning models, I build an ensemble to enhance accuracy and deploy an interactive Streamlit dashboard for real-time forecast visualisation and performance monitoring.
+This project delivers a robust time series forecasting pipeline combining macroeconomic indicators and ENSO climate signals to predict Arabica coffee prices. Leveraging classical, machine learning, and deep learning models, I build an ensemble to enhance accuracy and deploy an interactive Streamlit dashboard for real-time forecast visualisation and performance monitoring. Also included is a simulated business plan for an academic project.
 
 ---
 
